@@ -238,8 +238,10 @@ input{
 /*------------------------------------ SOBRE -----------------------*/
 #about {
     background: url(/src/img/background-about.svg) center/cover no-repeat;
-    padding: 15rem 1rem 1rem;
+    padding-block-start: 10rem;
+    padding-block-end: 90rem;
     text-align: center;
+
   }
   
   .about-content {
@@ -289,13 +291,15 @@ input{
     }
 }
 
+/*---------------------------------PLANOS----------------------*/  
+
 #plans{
     background: url(/src/img/plans.svg) center/cover no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-block: 85rem;
+    padding-block: 90rem;
     padding-inline: 3rem;
 }
 
@@ -303,6 +307,7 @@ input{
     font-family: 'Sedgwick Ave', cursive;
     font-size: 4.6rem;
     margin-bottom: 2rem;
+    text-align: center;
 }
 
 
@@ -312,7 +317,6 @@ input{
     align-items: center;
     justify-content: center;
     width: 50%;
-    height: 30rem;
     background-color: #1a1a1a;
     padding: 2rem;
     text-align: center;
@@ -348,7 +352,14 @@ input{
     font-family: "Poppins", sans-serif;
     
 }
-  
+
+
+@media screen and (max-width: 500px){
+    .plan{
+        width: 25rem;
+    }
+}
+
 .imc-calculator {
     margin-block: 2rem;
     margin-inline: auto;
@@ -389,6 +400,7 @@ input{
     padding: 1rem;
     border-radius: .5rem;
     cursor: pointer;
+    width: 100%;
     -webkit-border-radius: .5rem;
     -moz-border-radius: .5rem;
     -ms-border-radius: .5rem;
@@ -403,14 +415,19 @@ input{
 
 #contact {
   background: url(/src/img/contato.svg) center/cover no-repeat;
-  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-block: 50rem;
 }
 
 #contact h2 {
   color: #fff;
-  margin-bottom: 30px;
-  font-size: 36px;
+  margin-bottom: 3rem;
+  font-size: 3.6rem;
   text-align: center;
+  font-family: 'Sedgwick Ave', cursive;
 }
 
 .container{
@@ -418,15 +435,19 @@ input{
 }
 
 #contact form {
+
   margin-bottom: 30px;
 }
 
 #contact input[type="text"],
 #contact input[type="email"],
 #contact textarea {
-  width: 50%;
-  padding: 12px 20px;
-  margin: 8px 0;
+  width: 100%;
+  margin-block: 2rem;
+  margin-inline: auto;
+  padding-block: 1.2rem;
+  padding-inline: 2rem;
+  margin: .8rem 0;
   box-sizing: border-box;
   border: 2px solid #ccc;
   border-radius: 4px;
@@ -435,6 +456,7 @@ input{
 #contact textarea {
   height: 150px;
   resize: none;
+  font-family: "Poppins", sans-serif;
 }
 
 #contact input[type="submit"] {
@@ -445,6 +467,21 @@ input{
   border-radius: 4px;
   cursor: pointer;
 }
+
+.btn-lg{
+  width: 100%;
+  height: 4rem;
+  border: none;
+  border-radius: .3rem;
+  background-color: #4CAF50;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  -webkit-border-radius: .3rem;
+  -moz-border-radius: .3rem;
+  -ms-border-radius: .3rem;
+  -o-border-radius: .3rem;
+}
+
 
 #contact input[type="submit"]:hover {
   background-color: #45a049;
@@ -462,18 +499,8 @@ input{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    gap: 1.5rem;
 }
 
-.btn-lg{
-    width: 15rem;
-    height: 4rem;
-    border: none;
-    border-radius: .3rem;
-    background-color: #4CAF50;
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    -webkit-border-radius: .3rem;
-    -moz-border-radius: .3rem;
-    -ms-border-radius: .3rem;
-    -o-border-radius: .3rem;
-}
+/*-----------------------------------LOGIN-----------------------*/
