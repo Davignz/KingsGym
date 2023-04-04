@@ -58,12 +58,93 @@
       
 
     <section id="plans">
+        <h1 class="plans-title">Nossos Planos</h1>
+        <div class="plan">
+            <h1>Plano Frango</h1>
+            <h4>R$50,00</h4>
+            <ul>
+                <li>Acesso à academia</li>
+                <li>Acesso à piscina</li>
+            </ul>
+            <button>Adquirir</button>
+        </div>
+        <div class="plan">
+            <h1>Plano Rato</h1>
+            <h4>R$80,00</h4>
+            <ul>
+                <li>Acesso à academia</li>
+                <li>Acesso à piscina</li>
+                <li>Acesso à cadeira de massagem</li>
+            </ul>
+            <button>Adquirir</button>
+        </div>
+        <div class="plan">
+            <h1>Plano Bodybuilder</h1>
+            <h4>R$120,00</h4>
+            <ul>
+                <li>Acesso à academia</li>
+                <li>Acesso à piscina</li>
+                <li>Acesso a liberação miofascial</li>
+                <li>Pré-treino disponível</li>
+            </ul>
+            <button>Adquirir</button>
+        </div>
+
+        <div class="imc-calculator">
+            <h3>Descubra seu nível de Frango!</h3>
+            <form>
+              <label for="height">Altura (cm):</label>
+              <input type="number" id="height" name="height" required>
         
+              <label for="weight">Peso (kg):</label>
+              <input type="number" id="weight" name="weight" required>
+        
+              <button type="submit" class="calc-imc">Calcular</button>
+            </form>
+        
+            <p>Seu IMC é <span id="imc"></span>. Você está <span id="resultado"></span>.</p>
+          </div>
     </section>
       
 
     <section id="contact">
-
+        <section id="contact">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8">
+                  <h2>Entre em contato</h2>
+                  <form id="contact-form" method="post" action="#">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Seu nome" name="name" required>
+                    </div>
+                    <div class="form-group">
+                      <input type="email" class="form-control" placeholder="Seu e-mail" name="email" required>
+                    </div>
+                    <div class="form-group">
+                      <textarea class="form-control" rows="6" placeholder="Sua mensagem" name="message" required></textarea>
+                    </div>
+                    <div class="text-center">
+                      <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
+                    </div>
+                  </form>
+                </div>
+                <div class="col-lg-4">
+                  <div class="contact-details">
+                    <h4>Informações de Contato</h4>
+                    <p><i class="fa fa-map-marker-alt"></i>Rua do Carandiru, 123 - Centro, São Paulo/SP</p>
+                    <p><i class="fa fa-phone"></i> (11) 1234-5678</p>
+                    <p><i class="fa fa-envelope"></i> contato@kingsgym.com.br</p>
+                    <div class="social-links">
+                      <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                      <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                      <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          
     </section>
 
     <section id="login">
