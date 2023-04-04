@@ -1,11 +1,16 @@
 :root {
     font-size: 62.5%;
+    overflow-x: hidden;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 body {
@@ -16,202 +21,224 @@ body {
     overflow-x: hidden;
 }
 
-.navbar{
-    display: flex;
-    width: 100%;
-    height: 10rem;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-}
-
-.title-navbar{
+a {
     color: #fff;
     text-decoration: none;
+
 }
-
-
-
-/* ----------------------------------------------------------------HOME---------------------------------------------------------------------*/
 
 section{
     width: 100%;
-    height: 100vh;
-    padding-inline: 2rem;
+    height: calc(100vh + 10rem);
 }
 
-@media (min-width:300px) {
-    .home {
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+.header{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 10rem;
+    padding-inline: 6rem;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0a0a0a;
+}
+
+.logo-title{
+    width: 100%;
+    display: flex;
+}
+
+.header .logo{
+    margin-inline-end: 6rem;
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+}
+
+.menu a {
+    display: block;
+    margin-inline-end: 1rem;
+    padding: .5rem;
+}
+
+
+/* -----------------------------MOBILE HEADER -------------------------------*/
+.btn-mobile{
+    position: relative;
+    width: 4rem;
+    height: 3rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+.bar {
+    display: block;
+    position: absolute;
+    width: 3rem;
+    height: .3rem;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+  }
+  
+  .bar:nth-child(1) {
+    top: 0;
+    left: 0;
+  }
+  
+  .bar:nth-child(2) {
+    top: 13px;
+    left: 0;
+  }
+  
+  .bar:nth-child(3) {
+    bottom: 0;
+    left: 0;
+  }
+
+  .btn-mobile.active .bar:nth-child(1) {
+    transform: translateY(1.3rem) rotate(45deg);
+  }
+  
+  .btn-mobile.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .btn-mobile.active .bar:nth-child(3) {
+    transform: translateY(-1.4rem) rotate(-45deg);
+  }
+
+@media (max-width: 800px){
+    .header{
+        justify-content: space-between;
+        padding-inline: 2rem;
+    }
+
+    .logo{
+        display: none;
+    }
+    
+    .title{
+        display: block;
+    }
+
+    .btn-mobile{
+        display: block;
+    }
+
+    .menu{
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 10rem;
+        background-color: #1a1a1a;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        flex-direction: column;
-        background: url(/src/img/background.svg) center/cover no-repeat;
+        z-index: 1000;
+        height: 0rem;
+        transition: .2s;
+        visibility: hidden;
+        overflow-y: hidden;
     }
 
-    .home p{
-        text-align: center;
-        margin-block: 1rem;
+
+    #nav.active .menu{
+        height: calc(100vh - 10rem);
+        visibility: visible;
+        overflow-y: auto;
     }
 
-    .home p:nth-child(1){
-        font-size: 5rem;
+    .menu a {
+        padding: .5rem;
+        margin: 1.5rem;
     }
+}
 
-    .home p:nth-child(2){
+/*-------------------------------------------HOME----------------------*/
+#home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background: url(/src/img/background.svg) center/cover no-repeat;
+}
+
+#home .home-texts{
+    text-align: center;
+
+}
+
+#home .home-texts p:nth-child(1){
+    font-size: 4.8rem;
+    font-weight: 600;
+}
+
+#home .home-texts p:nth-child(2){
+    font-size: 2.8rem;
+    font-weight: 500;
+}
+
+#home .home-texts p:nth-child(3){
+    font-size: 1.6rem;
+}
+
+@media (min-width: 830px){
+    #home .home-texts p:nth-child(1){
+        font-size: 5.6rem;
+        font-weight: 600;
+    }
+    
+    #home .home-texts p:nth-child(2){
+        font-size: 3.6rem;
+        font-weight: 500;
+    }
+    
+    #home .home-texts p:nth-child(3){
+        font-size: 2.4rem;
+    }
+}
+
+@media (min-width: 1024px){
+    #home .home-texts p:nth-child(1){
+        font-size: 6.4rem;
+        font-weight: 600;
+    }
+    
+    #home .home-texts p:nth-child(2){
+        font-size: 4.2rem;
+        font-weight: 500;
+    }
+    
+    #home .home-texts p:nth-child(3){
         font-size: 3.2rem;
     }
-
-    .navbar .logo-title-navbar .logo-navbar{
-        display: none;
-    }
-    
-    .navbar .hamburguer-lines{
-        position: absolute;
-        z-index: 999;
-        width: 3.5rem;
-        height: 3.5rem;
-        right: 2.5rem;
-    }
-    
-    .navbar .hamburguer-lines span{
-        display: block;
-        width: 3.5rem;
-        height: .4rem;
-        background-color: #fff;
-        margin-bottom: .7rem;
-        transition: all ease .2s;
-    }
-    
-    .navbar .menu-verify{
-        position: absolute;
-        z-index: 1000;
-        width: 3.5rem;
-        height: 3.5rem;
-        opacity: 0;
-        cursor: pointer;
-        right: 2.5rem;
-    }
-    
-    .navbar .menu-verify:checked ~ .hamburguer-lines span{
-        background-color: #fff;
-    
-    }
-    
-    .navbar .menu-verify:checked ~ .hamburguer-lines span:nth-child(1){
-        transform-origin: 0% 0%;
-        transform: rotate(45deg) scaleX(1);
-    
-    }
-    
-    .navbar .menu-verify:checked ~ .hamburguer-lines span:nth-child(2){
-        opacity: 0;
-    }
-    
-    .navbar .menu-verify:checked ~ .hamburguer-lines span:nth-child(3){
-        transform-origin: 0% 100%;
-        transform: rotate(-45deg) scaleX(1);
-    }
-    
-    .navbar .area-links{
-        position: absolute;
-        z-index: 998;
-        width: 100%;
-        height: 100vh;
-        background-color: #1a1a1a;
-        left: 0;
-        top: 0;
-        margin-left: -100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: all ease .2s;
-    }
-    
-    .navbar .menu-verify:checked ~ .area-links{
-        margin-left: 0rem;
-    }
-    
-    .navbar .links-navbar{
-        list-style: none;
-        color: #fff;
-        text-decoration: none;
-        text-align: center;
-    }
-    
-    .navbar .links-navbar li{
-        margin-block: 5rem;
-    }
-    
-    .navbar .links-navbar li a{
-        font-size: 2rem;
-    }
 }
 
-@media (min-width:600px) {
-    .navbar{
-        background-color: #0a0a0a;
-    }
-
-    .navbar .logo-title-navbar{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .navbar .logo-title-navbar .logo-navbar{
-        display: block;
-        position: absolute;
-        left: 8.4rem;
-    }
-
-    .navbar .menu-verify{
-        right: 8.4rem;
-    }
-
-    .navbar .hamburguer-lines{
-        right: 8.4rem;
-    }
-}
-
-@media (min-width:801px) {
-    .home p:nth-child(1){
-        font-size: 7.2rem;
-        margin-bottom: 2rem;
-    }
-
-    .home p:nth-child(2){
-        font-size: 4.8rem;
-    }
-
-    .home p:nth-child(3){
-        font-size: 2.8rem;
-    }
-}
-
-@media (min-width:1025px) {
-    .links-navbar {
-        display: flex;
-        margin-inline: 2rem;
-      }
-
-    .navbar .hamburguer-lines{
-        display: none;
-    }
-
-    .navbar .hamburguer-lines span{
-        display: none;
-    }
-
+/*------------------------------------ SOBRE -----------------------*/
+#about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10rem;
+    background: url(/src/img/background-about.svg) center/cover no-repeat;
 
 }
 
-
-@media (min-width:320px) {}
-@media (min-width:480px) { /* smartphones, Android phones, landscape iPhone */ }
-@media (min-width:600px) {}
-@media (min-width:801px) { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
-@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
-@media (min-width:1281px) { /* hi-res laptops and desktops */ }
-
+#about .about-title{
+    font-family: 'Sedgwick Ave', cursive;
+    font-size: 2rem;
+}

@@ -7,55 +7,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/src/style/home.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
     <title>Home - Kings Gym</title>
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="logo-title-navbar">
-            <img src="/src/img/logo-white.svg" class="logo-navbar"></img>
-            <a class="title-navbar" href="/src/home.html">
-                <h1>KINGS GYM</h1>
-            </a>
-        </div>
 
-        <input type="checkbox" name="verify-hamburguer" class="menu-verify">
-        <div class="hamburguer-lines">
-            <span></span>
-            <span></span>
-            <span></span>
+    <header class="header">
+        <div class="logo-title">
+            <a href="#home" class="logo"><img src="/src/img/logo-white.svg" alt="Logo"></a>
+            <h1 class="title">KINGS GYM</h1>
         </div>
-        <span class="area-links">
-            <ul class="links-navbar">
-                <li class="list-navbar"><a class="links-navbar home" href="#">Home</a></li>
-                <li class="list-navbar"><a class="links-navbar about" href="#">Sobre</a></li>
-                <li class="list-navbar"><a class="links-navbar plans" href="#">Planos</a></li>
-                <li class="list-navbar"><a class="links-navbar contact" href="#">Contato</a></li>
-                <li class="list-navbar"><a class="links-navbar login" href="#">Login</a></li>
+        <nav id="nav">
+            <button class="btn-mobile">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="menu">
+                <li><a href="#home" class="">Home</a></li>
+                <li><a href="#about" class="">Sobre</a></li>
+                <li><a href="#plans" class="">Planos</a></li>
+                <li><a href="#contact" class="">Contato</a></li>
+                <li><a href="#login" class="">Login</a></li>
+
             </ul>
-        </span>
-    </nav>
+        </nav>
+    </header>
 
 
-    <section class="home">
-        <p>A GOLDEN ERA AINDA EXISTE</p>
-        <p>AQUI FRANGO NÃO SE CRIA</p>
-        <p>(SOMENTE OS GRAÚDOS)</p>
+    <section id="home">
+        <div class="home-texts">
+            <p>A GOLDEN ERA AINDA EXISTE</p>
+            <p>AQUI FRANGO NÃO SE CRIA</p>
+            <p>(SOMENTE OS GRAÚDOS)</p>
+        </div>
     </section>
 
-    <section class="about">
-        
+    <section id="about">
+        <span class="about-title">Sobre Nós</span>
+        A Academia Old School é um lugar onde você pode reviver essa época de ouro do fisiculturismo. É um lugar onde você pode se sentir em casa com equipamentos simples e básicos, sem frescuras. É um lugar onde você pode encontrar uma comunidade de pessoas com interesses semelhantes, que compartilham sua paixão pelo treinamento e estilo de vida saudável.
+
+        Junte-se a nós na Academia Old School e experimente a verdadeira essência do fisiculturismo. Aqui, você não será julgado pelo tamanho do seu músculo, mas sim pelo seu comprometimento e perseverança. Aqui, você pode se sentir em casa e desfrutar da atmosfera autêntica da Gold Era. Junte-se a nós e faça parte desta comunidade única.
     </section>
 
-    <section class="plans">
+    <section id="plans">
 
     </section>
 
-    <section class="contact">
+    <section id="contact">
 
     </section>
 
-    <section class="login">
+    <section id="login">
 
     </section>
 

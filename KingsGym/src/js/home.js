@@ -1,6 +1,7 @@
-const areaLinks = document.getElementsByClassName('.area-links');
-if (window.innerWidth >= 1025) {
-  areaLinks.classList.remove('area-links');
-} else{
-    areaLinks.classList.add('area-links');
-}
+const btnMobile = document.querySelector('.btn-mobile');
+const nav = document.querySelector('#nav');
+
+btnMobile.addEventListener('click', function() {
+  nav.classList.toggle('active');
+  btnMobile.classList.toggle('active');
+});
