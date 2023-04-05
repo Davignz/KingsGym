@@ -48,6 +48,16 @@ img{
     justify-content: space-between;
     align-items: center;
     background-color: #0a0a0a;
+    transition: .2s;
+}
+
+.header.dark{
+  background-color: #e1e1e1;
+}
+
+h1.htitle.dark{
+  color: #0a0a0a;
+  
 }
 
 input{
@@ -66,8 +76,8 @@ input{
 }
 
 .menu{
-    display: flex;
-    list-style: none;
+  display: flex;
+  list-style: none;
 }
 
 .menu a {
@@ -76,7 +86,40 @@ input{
     padding: .5rem;
 }
 
+.dark-mode-toggle {
+  position: relative;
+  width: 4.5rem;
+  height: 2rem;
+  border-radius: 2rem;
+  background-color: #e1e1e1;
+  border: .1rem solid #1a1a1a;
+  cursor: pointer;
+  
+}
 
+.dark-mode-toggle::before {
+  content: "";
+  position: absolute;
+  width: 1.6rem;
+  height: 1.6rem;
+  top: 50%;
+  left: .2rem;
+  border-radius: 50%;
+  background-color: #1a1a1a;
+  transition: transform 0.2s;
+  transform: translateY(-50%);
+}
+
+.dark-mode-toggle.dark::before{
+  left: 2rem;
+  background-color: #fff;
+}
+
+@media screen and (min-width: 1024px){
+  .dark-mode-toggle.dark::before{
+    left: 1rem;
+  }
+}
 /* -----------------------------MOBILE HEADER -------------------------------*/
 .btn-mobile{
     position: relative;
@@ -88,6 +131,7 @@ input{
     display: none;
 }
 
+
 .bar {
     display: block;
     position: absolute;
@@ -95,6 +139,10 @@ input{
     height: .3rem;
     background-color: #fff;
     transition: transform 0.3s ease;
+  }
+
+  .bar.dark{
+    background-color: #0a0a0a;
   }
   
   .bar:nth-child(1) {
@@ -159,6 +207,10 @@ input{
         overflow-y: hidden;
     }
 
+    .menu.dark{
+      background-color: #c2c2c2;
+    }
+
 
     #nav.active .menu{
         height: calc(100vh - 10rem);
@@ -169,6 +221,10 @@ input{
     .menu a {
         padding: .5rem;
         margin: 1.5rem;
+    }
+
+    .menu a.dark{
+      color: #0a0a0a;
     }
 
 
@@ -262,7 +318,7 @@ input{
     flex: 1;
   }
   
-  .about-title {
+  .title {
     font-family: 'Sedgwick Ave', cursive;
     font-size: 4.6rem;
     margin-bottom: 2rem;
@@ -303,13 +359,6 @@ input{
     padding-inline: 3rem;
 }
 
-#plans .plans-title{
-    font-family: 'Sedgwick Ave', cursive;
-    font-size: 4.6rem;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
 
 .plan{
     display: flex;
@@ -327,6 +376,12 @@ input{
     -o-border-radius: .5rem;
     margin-block: 2rem;
     border: .5rem groove #3b3b3b;
+    transition: .2s;
+}
+
+.plan.dark{
+  background-color: #e1e1e1;
+  color: #0a0a0a;
 }
 
 .plan ul{
@@ -370,6 +425,12 @@ input{
     -moz-border-radius: 1rem;
     -ms-border-radius: 1rem;
     -o-border-radius: 1rem;
+    transition: .2s;
+}
+
+.imc-calculator.dark{
+  background-color: #e1e1e1;
+  color: #0a0a0a;
 }
   
   .imc-calculator h3 {
@@ -503,6 +564,8 @@ input{
     gap: 1.5rem;
 }
 
+
+
 /*-----------------------------------LOGIN-----------------------*/
 #login{
   display: flex;
@@ -526,6 +589,12 @@ input{
   text-align: center;
   margin: 50px auto;
   max-width: 400px;
+  transition: .2s;
+}
+
+.login-section.dark{
+  background-color: #e1e1e1;
+  color:#0a0a0a;
 }
 
 .login-section h2 {
@@ -565,6 +634,7 @@ input{
 
 .login-section a {
   text-decoration: underline;
+  color: #3a86ff;
 }
 
 @media (max-width: 800px) {
@@ -593,4 +663,16 @@ input{
   .login-section a {
     font-size: 14px;
   }
+}
+
+@media screen and (min-width: 1024px) {
+  #contact{
+    padding-block: 50rem;
+  }
+
+  #login{
+    padding-block: 40rem;
+  }
+  
+  
 }
