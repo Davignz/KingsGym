@@ -1,10 +1,19 @@
 const btnMobile = document.querySelector('.btn-mobile');
 const nav = document.querySelector('#nav');
+const links = document.querySelectorAll('.menu a');
 
 btnMobile.addEventListener('click', function() {
   nav.classList.toggle('active');
   btnMobile.classList.toggle('active');
 });
+
+links.forEach(function(link) {
+  link.addEventListener('click', function() {
+    nav.classList.remove('active');
+    btnMobile.classList.remove('active');
+  });
+});
+
 
 function calcularIMC() {
   var altura = document.getElementById("height").value / 100;
